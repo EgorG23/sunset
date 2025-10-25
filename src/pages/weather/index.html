@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Website</title>
+    <style>
+        .weather-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .weather-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .temperature {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1rem 0;
+        }
+        
+        .weather-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .detail-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+    </style>
+  <script type="module" crossorigin src="/sunset/assets/weather-BiDH9Nif.js"></script>
+  <link rel="modulepreload" crossorigin href="/sunset/assets/main-Bmma5tE7.js">
+  <link rel="stylesheet" crossorigin href="/sunset/assets/main-BjF9YvXI.css">
+</head>
+<body>
+    <div id="app">
+        <nav id="navigation">
+            <a href="/sunset/">Главная</a>
+            <a href="/sunset/src/pages/music/">Музыка</a>
+            <a href="/sunset/src/pages/weather/" class="active">Погода</a>
+            <a href="/sunset/src/pages/books/">Книги</a>
+        </nav>
+        
+        <main>
+            <div class="hero">
+                <h1>🌤️ Погода</h1>
+                <p>Узнайте текущую погоду в любом городе</p>
+            </div>
+
+            <section class="spotify-widget">
+                <h2>Поиск погоды</h2>
+                <div class="search-container">
+                    <input type="text" id="city-input" placeholder="Введите название города...">
+                    <button id="weather-btn" class="btn">Узнать погоду</button>
+                </div>
+                
+                <div id="weather-results">
+                    <div class="loading">Введите город чтобы узнать погоду</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
