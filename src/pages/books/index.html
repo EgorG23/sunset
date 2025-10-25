@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Website</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <nav id="navigation">
+            <a href="/sunset/">Главная</a>
+            <a href="/sunset/src/pages/music/">Музыка</a>
+            <a href="/sunset/src/pages/weather/">Погода</a>
+            <a href="/sunset/src/pages/books/" class="active">Книги</a>
+        </nav>
+        
+        <main>
+            <div class="hero">
+                <h1>📚 Книжный раздел</h1>
+                <p>Найдите интересные книги для чтения</p>
+            </div>
+
+            <section class="spotify-widget">
+                <h2>Поиск книг</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Введите название книги или автора...">
+                    <button id="search-btn" class="btn">Поиск</button>
+                </div>
+                
+                <div id="books-results" class="playlist-container">
+                    <div class="loading">Используйте поиск чтобы найти книги</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="/src/scripts/books.js"></script>
+</body>
+</html>
