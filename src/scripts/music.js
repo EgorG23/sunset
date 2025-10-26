@@ -2,7 +2,7 @@ class MusicAPI {
     async searchTracks(query) {
         try {
             const response = await fetch(
-                `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=musicTrack&limit=8&country=RU`
+                `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=musicTrack&country=US`
             );
             
             if (!response.ok) {
