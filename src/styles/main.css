@@ -18,7 +18,6 @@ body {
     padding: 40px 20px;
 }
 
-/* Навигация */
 nav {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
@@ -47,7 +46,6 @@ nav a:hover {
     color: #e65100;
 }
 
-/* АКТИВНАЯ КНОПКА - ОРАНЖЕВЫЙ ГРАДИЕНТ */
 nav a.active {
     background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
     color: white;
@@ -65,7 +63,6 @@ nav a.active::after {
     border-radius: 2px;
 }
 
-/* ГЕРОЙ СЕКЦИЯ - ОРАНЖЕВЫЙ ГРАДИЕНТ ДЛЯ ЗАГОЛОВКА */
 .hero {
     text-align: center;
     color: #2d3748;
@@ -94,7 +91,6 @@ nav a.active::after {
     margin-bottom: 0.5rem;
 }
 
-/* ЗАГОЛОВКИ СЕКЦИЙ - ОРАНЖЕВЫЙ ГРАДИЕНТ */
 .spotify-widget h2 {
     text-align: center;
     font-size: 2.2rem;
@@ -117,7 +113,6 @@ nav a.active::after {
     background-clip: text;
 }
 
-/* Яндекс.Музыка виджет */
 .yandex-music-widget {
     background: white;
     border-radius: 24px;
@@ -136,37 +131,6 @@ nav a.active::after {
     min-height: 556px;
 }
 
-/* Информация об альбоме */
-.album-info {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 20px 20px 0 0;
-    text-align: center;
-    border-bottom: 2px solid rgba(255, 152, 0, 0.2);
-    backdrop-filter: blur(10px);
-}
-
-.album-info h3 {
-    color: #e65100;
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.album-artist {
-    color: #ff9800;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-/* Заголовок альбома дня */
-.album-title {
-    color: #ff9800;
-    font-weight: 600;
-}
-
-/* Карточки фич */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -209,7 +173,6 @@ nav a.active::after {
     font-size: 1.1rem;
 }
 
-/* КНОПКИ - ОРАНЖЕВЫЙ ГРАДИЕНТ */
 .btn {
     display: inline-block;
     background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
@@ -230,7 +193,6 @@ nav a.active::after {
     box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
 }
 
-/* Утилиты */
 .loading {
     text-align: center;
     padding: 4rem 2rem;
@@ -274,7 +236,6 @@ nav a.active::after {
     box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.15);
 }
 
-/* Стили для табличного представления */
 .playlist-container, .books-container {
     display: flex;
     flex-direction: column;
@@ -409,7 +370,6 @@ nav a.active::after {
     box-shadow: 0 6px 16px rgba(255, 152, 0, 0.4);
 }
 
-/* Заголовки колонок */
 .playlist-header, .books-header {
     display: grid;
     grid-template-columns: 50px 50px 1fr 1fr 1fr 90px;
@@ -434,7 +394,51 @@ nav a.active::after {
     text-align: center;
 }
 
-/* Адаптивность */
+.weather-widget {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 35px rgba(139, 155, 168, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 1rem 0;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.weather-detail {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 4px solid #ff9800;
+}
+
+.books-search {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
 @media (max-width: 768px) {
     #app {
         padding: 25px 15px;
@@ -508,9 +512,121 @@ nav a.active::after {
         max-width: 100%;
         padding: 1rem 1.5rem;
     }
+
+    .playlist-container, .books-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .track-row {
+        grid-template-columns: 35px 35px 1fr 70px !important;
+        gap: 0.6rem;
+        padding: 0.8rem;
+        min-width: 350px;
+    }
+    
+    .playlist-header {
+        grid-template-columns: 35px 35px 1fr 70px !important;
+        min-width: 350px;
+    }
+    
+    .book-row {
+        grid-template-columns: 35px 45px 1fr 80px !important;
+        gap: 0.6rem;
+        padding: 0.8rem;
+        min-width: 350px;
+    }
+    
+    .books-header {
+        grid-template-columns: 35px 45px 1fr 80px !important;
+        min-width: 350px;
+    }
+
+    .track-album {
+        display: none;
+    }
+    
+    .book-year {
+        display: none;
+    }
+
+    .track-name {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .track-artist {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .book-title {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    .book-author {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .preview-button {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .weather-temp {
+        font-size: 2.5rem;
+    }
 }
 
-/* Дополнительные улучшения */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .track-row {
+        min-width: 320px;
+        grid-template-columns: 30px 30px 1fr 60px !important;
+    }
+    
+    .book-row {
+        min-width: 320px;
+        grid-template-columns: 30px 40px 1fr 70px !important;
+    }
+    
+    .track-image {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .book-image {
+        width: 45px;
+        height: 60px;
+    }
+    
+    .play-button {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -529,7 +645,6 @@ nav a.active::after {
     background: linear-gradient(135deg, #f57c00 0%, #d84315 100%);
 }
 
-/* Анимация появления */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -541,50 +656,20 @@ nav a.active::after {
     }
 }
 
-.hero, .feature-card, .yandex-music-widget {
+.hero, .feature-card, .yandex-music-widget, .weather-widget {
     animation: fadeInUp 0.8s ease-out;
 }
 
-@media (max-width: 768px) {
-    .track-row {
-        grid-template-columns: 35px 35px 1fr 70px !important;
-        gap: 0.6rem;
-        padding: 0.8rem;
+@media (hover: none) and (pointer: coarse) {
+    .feature-card:hover {
+        transform: none;
     }
     
-    .playlist-header {
-        grid-template-columns: 35px 35px 1fr 70px !important;
-    }
-
-    .playlist-container, .books-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+    .track-row:hover, .book-row:hover {
+        transform: none;
     }
     
-    .track-row, .book-row {
-        min-width: 500px; /* ← ДОБАВИТЬ минимальную ширину */
-    }
-    
-    /* Скрываем только альбом */
-    .track-album {
-        display: none;
-    }
-    
-    /* Улучшаем названия треков */
-    .track-name {
-        font-size: 0.85rem;
-        line-height: 1.3;
-        white-space: normal;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    
-    /* Улучшаем артистов */
-    .track-artist {
-        font-size: 0.8rem;
-        line-height: 1.2;
-        white-space: normal;
+    .btn:active, .play-button:active, .preview-button:active {
+        transform: scale(0.95);
     }
 }

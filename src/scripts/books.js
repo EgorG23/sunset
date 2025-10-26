@@ -39,7 +39,6 @@ class BooksAPI {
 
 const booksAPI = new BooksAPI();
 
-// Обработчики событий
 document.getElementById('search-btn')?.addEventListener('click', performSearch);
 document.getElementById('search-input')?.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
@@ -110,7 +109,6 @@ function renderBooks(books, title) {
     `;
 }
 
-// Показать популярные книги при загрузке страницы
 document.addEventListener('DOMContentLoaded', async () => {
     const resultsContainer = document.getElementById('books-results');
     if (resultsContainer && resultsContainer.innerHTML.includes('Используйте поиск')) {
@@ -120,7 +118,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 renderBooks(books.slice(0, 20), 'Популярные книги о программировании');
             }
         } catch (error) {
-            // Оставляем исходное сообщение
         }
     }
 });

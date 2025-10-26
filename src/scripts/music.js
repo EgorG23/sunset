@@ -95,7 +95,6 @@ class MusicAPI {
     }
 }
 
-// Аудио менеджер
 class AudioManager {
     constructor() {
         this.currentAudio = null;
@@ -103,7 +102,6 @@ class AudioManager {
     }
 
     playAudio(previewUrl, button) {
-        // Если кликаем на ту же кнопку - пауза/продолжение
         if (this.currentPlayingButton === button && this.currentAudio) {
             if (this.currentAudio.paused) {
                 this.currentAudio.play();
@@ -117,7 +115,6 @@ class AudioManager {
             return;
         }
         
-        // Останавливаем предыдущее воспроизведение
         if (this.currentAudio) {
             this.currentAudio.pause();
             if (this.currentPlayingButton) {
@@ -132,18 +129,14 @@ class AudioManager {
         }
         
         try {
-            // Создаем новый аудио элемент
             this.currentAudio = new Audio(previewUrl);
             this.currentPlayingButton = button;
-            
-            // Обновляем кнопку
+
             button.innerHTML = '⏸';
             button.classList.add('playing');
-            
-            // Воспроизводим
+
             this.currentAudio.play();
-            
-            // События
+
             this.currentAudio.onended = () => this.onAudioEnded();
             this.currentAudio.onerror = () => this.onAudioError();
             
@@ -176,7 +169,6 @@ class AudioManager {
 const musicAPI = new MusicAPI();
 const audioManager = new AudioManager();
 
-// Обработчики событий
 document.getElementById('search-btn')?.addEventListener('click', performSearch);
 document.getElementById('search-input')?.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
@@ -246,7 +238,6 @@ function renderTracks(tracks, title) {
         </div>
     `;
     
-    // Добавляем обработчики для кнопок
     document.querySelectorAll('.play-button').forEach(button => {
         button.addEventListener('click', function() {
             const previewUrl = this.getAttribute('data-preview');
@@ -255,7 +246,6 @@ function renderTracks(tracks, title) {
     });
 }
 
-// Показать популярные треки при загрузке страницы
 document.addEventListener('DOMContentLoaded', async () => {
     const resultsContainer = document.getElementById('music-results');
     if (resultsContainer && resultsContainer.innerHTML.includes('Используйте поиск')) {
@@ -265,7 +255,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 renderTracks(tracks, 'Популярные');
             }
         } catch (error) {
-            // Оставляем исходное сообщение
+
         }
     }
 });

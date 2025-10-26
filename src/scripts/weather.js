@@ -1,6 +1,6 @@
 class WeatherAPI {
     constructor() {
-        this.apiKey = 'ТВОЙ_API_КЛЮЧ'; // ← ЗАМЕНИ НА СВОЙ КЛЮЧ
+        this.apiKey = 'ТВОЙ_API_КЛЮЧ';
     }
 
     async getWeather(city) {
@@ -119,7 +119,6 @@ async function getWeather() {
     }
 }
 
-// Показать погоду для популярных городов при загрузке
 document.addEventListener('DOMContentLoaded', async () => {
     const resultsContainer = document.getElementById('weather-results');
     if (resultsContainer && resultsContainer.innerHTML.includes('Введите город')) {
@@ -140,7 +139,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             `;
         } catch (error) {
-            // Оставляем исходное сообщение
         }
     }
 });
