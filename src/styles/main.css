@@ -543,3 +543,38 @@ nav a.active::after {
 .hero, .feature-card, .yandex-music-widget {
     animation: fadeInUp 0.8s ease-out;
 }
+
+@media (max-width: 768px) {
+    .track-row {
+        grid-template-columns: 35px 35px 1fr 70px !important;
+        gap: 0.6rem;
+        padding: 0.8rem;
+    }
+    
+    .playlist-header {
+        grid-template-columns: 35px 35px 1fr 70px !important;
+    }
+    
+    /* Скрываем только альбом */
+    .track-album {
+        display: none;
+    }
+    
+    /* Улучшаем названия треков */
+    .track-name {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Улучшаем артистов */
+    .track-artist {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        white-space: normal;
+    }
+}
