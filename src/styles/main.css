@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -44,13 +43,15 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(139, 155, 168, 0.1);
-    color: #4a5c6d;
+    background: rgba(255, 152, 0, 0.1);
+    color: #e65100;
 }
 
+/* АКТИВНАЯ КНОПКА - ОРАНЖЕВЫЙ ГРАДИЕНТ */
 nav a.active {
-    background: rgba(139, 155, 168, 0.15);
-    color: #8b9ba8;
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
 }
 
 nav a.active::after {
@@ -60,11 +61,11 @@ nav a.active::after {
     left: 25%;
     width: 50%;
     height: 2px;
-    background: #8b9ba8;
+    background: #ff9800;
     border-radius: 2px;
 }
 
-/* Герой секция */
+/* ГЕРОЙ СЕКЦИЯ - ОРАНЖЕВЫЙ ГРАДИЕНТ ДЛЯ ЗАГОЛОВКА */
 .hero {
     text-align: center;
     color: #2d3748;
@@ -79,7 +80,7 @@ nav a.active::after {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #8b9ba8 0%, #6b8e8e 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -91,6 +92,29 @@ nav a.active::after {
     color: #6b8e8e;
     line-height: 1.7;
     margin-bottom: 0.5rem;
+}
+
+/* ЗАГОЛОВКИ СЕКЦИЙ - ОРАНЖЕВЫЙ ГРАДИЕНТ */
+.spotify-widget h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.feature-card h3 {
+    color: #4a5c6d;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Яндекс.Музыка виджет */
@@ -108,7 +132,37 @@ nav a.active::after {
 .yandex-music-widget iframe {
     border-radius: 24px;
     width: 100%;
-    height: 450px;
+    height: 556px;
+}
+
+/* Информация об альбоме */
+.album-info {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 152, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.album-info h3 {
+    color: #e65100;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.album-artist {
+    color: #ff9800;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Заголовок альбома дня */
+.album-title {
+    color: #ff9800;
+    font-weight: 600;
 }
 
 /* Карточки фич */
@@ -139,19 +193,12 @@ nav a.active::after {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(135deg, #8b9ba8 0%, #6b8e8e 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(139, 155, 168, 0.2);
-}
-
-.feature-card h3 {
-    color: #4a5c6d;
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem;
-    font-weight: 600;
 }
 
 .feature-card p {
@@ -161,9 +208,10 @@ nav a.active::after {
     font-size: 1.1rem;
 }
 
+/* КНОПКИ - ОРАНЖЕВЫЙ ГРАДИЕНТ */
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #8b9ba8 0%, #6b8e8e 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
     color: white;
     padding: 1rem 2.2rem;
     border-radius: 14px;
@@ -172,13 +220,13 @@ nav a.active::after {
     font-weight: 500;
     border: none;
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(139, 155, 168, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.3);
     font-size: 1.05rem;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(139, 155, 168, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
 }
 
 /* Утилиты */
@@ -221,8 +269,8 @@ nav a.active::after {
 
 .search-container input:focus {
     outline: none;
-    border-color: #8b9ba8;
-    box-shadow: 0 0 0 4px rgba(139, 155, 168, 0.15);
+    border-color: #ff9800;
+    box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.15);
 }
 
 /* Стили для табличного представления */
@@ -294,7 +342,7 @@ nav a.active::after {
 }
 
 .track-artist, .book-author {
-    color: #6b8e8e;
+    color: #ff9800;
     font-size: 0.95rem;
     white-space: nowrap;
     overflow: hidden;
@@ -316,7 +364,7 @@ nav a.active::after {
 }
 
 .play-button {
-    background: linear-gradient(135deg, #8b9ba8 0%, #6b8e8e 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
     color: white;
     border: none;
     border-radius: 50%;
@@ -328,20 +376,20 @@ nav a.active::after {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 12px rgba(139, 155, 168, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
 }
 
 .play-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 18px rgba(139, 155, 168, 0.4);
+    box-shadow: 0 6px 18px rgba(255, 152, 0, 0.4);
 }
 
 .play-button.playing {
-    background: linear-gradient(135deg, #e8a798 0%, #d18b7a 100%);
+    background: linear-gradient(135deg, #e65100 0%, #bf360c 100%);
 }
 
 .preview-button {
-    background: linear-gradient(135deg, #8b9ba8 0%, #6b8e8e 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
     color: white;
     border: none;
     border-radius: 10px;
@@ -352,12 +400,12 @@ nav a.active::after {
     text-decoration: none;
     display: inline-block;
     font-weight: 500;
-    box-shadow: 0 4px 12px rgba(139, 155, 168, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
 }
 
 .preview-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(139, 155, 168, 0.4);
+    box-shadow: 0 6px 16px rgba(255, 152, 0, 0.4);
 }
 
 /* Заголовки колонок */
@@ -366,7 +414,7 @@ nav a.active::after {
     grid-template-columns: 50px 50px 1fr 1fr 1fr 90px;
     gap: 1.5rem;
     padding: 1rem 1.5rem;
-    color: #6b8e8e;
+    color: #ff9800;
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -385,17 +433,12 @@ nav a.active::after {
     text-align: center;
 }
 
-/* ==================== */
-/* МОБИЛЬНАЯ ВЕРСИЯ */
-/* ==================== */
-
-/* Планшеты (768px и меньше) */
+/* Адаптивность */
 @media (max-width: 768px) {
     #app {
         padding: 25px 15px;
     }
     
-    /* Навигация для планшетов */
     nav {
         flex-direction: column;
         gap: 0.8rem;
@@ -408,7 +451,6 @@ nav a.active::after {
         text-align: center;
     }
     
-    /* Герой секция */
     .hero {
         padding: 2.5rem 1rem;
         margin-bottom: 2.5rem;
@@ -424,7 +466,10 @@ nav a.active::after {
         line-height: 1.6;
     }
     
-    /* Виджет музыки */
+    .spotify-widget h2 {
+        font-size: 1.8rem;
+    }
+    
     .yandex-music-widget {
         margin: 2rem auto;
         border-radius: 20px;
@@ -435,7 +480,6 @@ nav a.active::after {
         border-radius: 20px;
     }
     
-    /* Карточки фич */
     .features {
         grid-template-columns: 1fr;
         gap: 1.8rem;
@@ -451,7 +495,6 @@ nav a.active::after {
         font-size: 1.4rem;
     }
     
-    /* Поиск */
     .search-container {
         flex-direction: column;
         align-items: center;
@@ -463,220 +506,6 @@ nav a.active::after {
         width: 100%;
         max-width: 100%;
         padding: 1rem 1.5rem;
-    }
-    
-    /* Таблицы треков */
-    .track-row {
-        grid-template-columns: 40px 40px 1fr 1fr 70px;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .playlist-header {
-        grid-template-columns: 40px 40px 1fr 1fr 70px;
-    }
-    
-    .track-album {
-        display: none;
-    }
-    
-    .track-image {
-        width: 38px;
-        height: 38px;
-    }
-    
-    .play-button {
-        width: 36px;
-        height: 36px;
-    }
-    
-    /* Таблицы книг */
-    .book-row {
-        grid-template-columns: 40px 50px 1fr 1fr 100px;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .books-header {
-        grid-template-columns: 40px 50px 1fr 1fr 100px;
-    }
-    
-    .book-year {
-        display: none;
-    }
-    
-    .book-image {
-        width: 45px;
-        height: 60px;
-    }
-}
-
-/* Телефоны (480px и меньше) */
-@media (max-width: 480px) {
-    #app {
-        padding: 20px 12px;
-    }
-    
-    /* Навигация для телефонов */
-    nav {
-        padding: 1rem 0.8rem;
-        border-radius: 16px;
-        gap: 0.5rem;
-    }
-    
-    nav a {
-        padding: 0.7rem 0.5rem;
-        font-size: 0.9rem;
-    }
-    
-    /* Герой секция */
-    .hero {
-        padding: 2rem 0.5rem;
-        margin-bottom: 2rem;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-    
-    /* Виджет музыки */
-    .yandex-music-widget {
-        margin: 1.5rem auto;
-        border-radius: 16px;
-    }
-    
-    .yandex-music-widget iframe {
-        height: 300px;
-        border-radius: 16px;
-    }
-    
-    /* Карточки фич */
-    .features {
-        gap: 1.5rem;
-        margin: 2rem 0;
-    }
-    
-    .feature-card {
-        padding: 1.5rem 1rem;
-        border-radius: 16px;
-    }
-    
-    .feature-card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-    
-    .feature-card p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .btn {
-        padding: 0.9rem 1.8rem;
-        font-size: 1rem;
-    }
-    
-    /* Таблицы треков для телефонов */
-    .track-row {
-        grid-template-columns: 30px 35px 1fr 50px;
-        gap: 0.8rem;
-        padding: 0.8rem;
-    }
-    
-    .playlist-header {
-        grid-template-columns: 30px 35px 1fr 50px;
-    }
-    
-    .track-artist {
-        display: none;
-    }
-    
-    .track-image {
-        width: 32px;
-        height: 32px;
-    }
-    
-    .track-name {
-        font-size: 0.9rem;
-    }
-    
-    .play-button {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
-    }
-    
-    /* Таблицы книг для телефонов */
-    .book-row {
-        grid-template-columns: 30px 40px 1fr 80px;
-        gap: 0.8rem;
-        padding: 0.8rem;
-    }
-    
-    .books-header {
-        grid-template-columns: 30px 40px 1fr 80px;
-    }
-    
-    .book-author {
-        display: none;
-    }
-    
-    .book-image {
-        width: 38px;
-        height: 50px;
-    }
-    
-    .book-title {
-        font-size: 0.9rem;
-        -webkit-line-clamp: 2;
-    }
-    
-    .preview-button {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.8rem;
-    }
-    
-    /* Утилиты для мобильных */
-    .loading {
-        padding: 3rem 1rem;
-        font-size: 1rem;
-    }
-    
-    .error {
-        padding: 1.2rem;
-        margin: 1.5rem 0;
-        font-size: 0.9rem;
-    }
-}
-
-/* Очень маленькие телефоны (360px и меньше) */
-@media (max-width: 360px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .feature-card {
-        padding: 1.2rem 0.8rem;
-    }
-    
-    .track-row {
-        grid-template-columns: 25px 30px 1fr 45px;
-        gap: 0.6rem;
-    }
-    
-    .book-row {
-        grid-template-columns: 25px 35px 1fr 70px;
-        gap: 0.6rem;
     }
 }
 
@@ -691,12 +520,12 @@ nav a.active::after {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #8b9ba8 0%, #6b8e8e 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #7a8a98 0%, #5c7e7e 100%);
+    background: linear-gradient(135deg, #f57c00 0%, #d84315 100%);
 }
 
 /* Анимация появления */
@@ -713,31 +542,4 @@ nav a.active::after {
 
 .hero, .feature-card, .yandex-music-widget {
     animation: fadeInUp 0.8s ease-out;
-}
-
-/* Улучшение касаний на мобильных */
-@media (hover: none) and (pointer: coarse) {
-    .feature-card:hover {
-        transform: none;
-    }
-    
-    .track-row:hover, .book-row:hover {
-        transform: none;
-    }
-    
-    .btn:active, .play-button:active, .preview-button:active {
-        transform: scale(0.95);
-    }
-}
-
-.album-timer {
-    color: #8b9ba8;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-}
-
-#countdown {
-    font-weight: 600;
-    color: #6b8e8e;
 }
