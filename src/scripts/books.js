@@ -1,7 +1,7 @@
 class BooksAPI {
     async searchBooks(query) {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=12&printType=books`);
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&printType=books`);
             
             if (!response.ok) {
                 throw new Error('Ошибка сети');

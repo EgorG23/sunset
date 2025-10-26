@@ -35,7 +35,7 @@ class MusicAPI {
             const randomQuery = popularQueries[Math.floor(Math.random() * popularQueries.length)];
             
             const response = await fetch(
-                `https://itunes.apple.com/search?term=${randomQuery}&entity=musicTrack&limit=6&country=RU`
+                `https://itunes.apple.com/search?term=${randomQuery}&entity=musicTrack&country=US`
             );
             
             if (!response.ok) {
