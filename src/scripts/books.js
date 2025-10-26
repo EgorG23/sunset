@@ -115,9 +115,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const resultsContainer = document.getElementById('books-results');
     if (resultsContainer && resultsContainer.innerHTML.includes('Используйте поиск')) {
         try {
-            const books = await booksAPI.searchBooks('программирование javascript');
+            const books = await booksAPI.searchBooks('Музыка');
             if (books.length > 0) {
-                renderBooks(books.slice(0, 8), 'Популярные книги о программировании');
+                renderBooks(books.slice(0, 20), 'Популярные книги о программировании');
             }
         } catch (error) {
             // Оставляем исходное сообщение
