@@ -375,7 +375,7 @@ nav a.active::after {
     grid-template-columns: 50px 50px 1fr 1fr 1fr 90px;
     gap: 1.5rem;
     padding: 1rem 1.5rem;
-    color: #ff9800;
+    background: linear-gradient(135deg, #667eea 0%, #8000ff 100%);
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
