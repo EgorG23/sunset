@@ -15,11 +15,11 @@ class AlbumRotator {
             },
             {
                 id: 4,
-                html: `<iframe frameborder="0" allow="clipboard-write" style="border:none;width:614px;height:556px;" width="614" height="556" src="https://music.yandex.ru/iframe/album/34065401">Слушайте <a href="https://music.yandex.ru/album/34065401?utm_source=desktop&utm_medium=copy_link">Die With A Smile</a> — <a href="https://music.yandex.ru/artist/1438">Lady Gaga</a> на Яндекс Музыке</iframe>`
+                html: `<iframe frameborder="0" allow="clipboard-write" style="border:none;width:100%;height:556px;border-radius:15px;" src="https://music.yandex.ru/iframe/album/34065401">Слушайте <a href="https://music.yandex.ru/album/34065401?utm_source=desktop&utm_medium=copy_link">Die With A Smile</a> — <a href="https://music.yandex.ru/artist/1438">Lady Gaga</a> на Яндекс Музыке</iframe>`
             },
             {
                 id: 5,
-                html: `<iframe frameborder="0" allow="clipboard-write" style="border:none;width:614px;height:556px;" width="614" height="556" src="https://music.yandex.ru/iframe/album/37196930">Слушайте <a href="https://music.yandex.ru/album/37196930?utm_source=desktop&utm_medium=copy_link">Virgin</a> — <a href="https://music.yandex.ru/artist/1654436">Lorde</a> на Яндекс Музыке</iframe>`
+                html: `<iframe frameborder="0" allow="clipboard-write" style="border:none;width:100%;height:556px;border-radius:15px;" src="https://music.yandex.ru/iframe/album/37196930">Слушайте <a href="https://music.yandex.ru/album/37196930?utm_source=desktop&utm_medium=copy_link">Virgin</a> — <a href="https://music.yandex.ru/artist/1654436">Lorde</a> на Яндекс Музыке</iframe>`
             }
         ];
         this.currentAlbumIndex = this.getMinuteOfHour() % this.albums.length;
