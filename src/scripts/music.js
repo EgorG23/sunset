@@ -31,7 +31,7 @@ class MusicAPI {
 
     async getTopTracks() {
         try {
-            const popularQueries = ['top', 'popular', 'hit', 'chart'];
+            const popularQueries = ['pop', 'rock', 'hip hop', 'electronic', 'r&b', 'dance'];
             const randomQuery = popularQueries[Math.floor(Math.random() * popularQueries.length)];
             
             const response = await fetch(
