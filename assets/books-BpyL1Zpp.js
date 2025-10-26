@@ -8,7 +8,7 @@ import"./main-DNEiqr4I.js";class d{async searchBooks(t){try{const r=await fetch(
                 <div class="header-image">📖</div>
                 <div>Название</div>
                 <div>Автор</div>
-                <div>Год</div>
+                <div>class="header-year">Год</div>
                 <div class="header-actions">Действия</div>
             </div>
             ${i.map((e,n)=>`
