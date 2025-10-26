@@ -444,7 +444,6 @@ nav a.active::after {
     margin-bottom: 2rem;
 }
 
-
 @media (max-width: 768px) {
     #app {
         padding: 25px 15px;
@@ -519,45 +518,117 @@ nav a.active::after {
         padding: 1rem 1.5rem;
     }
 
-    .track-album {
+    /* Скрыть заголовки таблицы на мобильных */
+    .playlist-header, .books-header {
         display: none;
     }
     
-    .book-year {
+    /* Вертикальные карточки для треков */
+    .track-row {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem;
+        text-align: center;
+        min-width: auto !important;
+    }
+    
+    /* Скрыть номер и изображение */
+    .track-number, .track-image {
         display: none;
-        text-align: left;
+    }
+
+    .track-album {
+        display: none;
     }
 
     .track-name {
-        font-size: 0.85rem;
-        line-height: 1.3;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2d3748;
         white-space: normal;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        line-height: 1.4;
+        order: 1;
     }
 
     .track-artist {
-        font-size: 0.8rem;
-        line-height: 1.2;
+        font-size: 1rem;
+        color: #ff9800;
+        font-weight: 500;
         white-space: normal;
+        line-height: 1.3;
+        order: 2;
+    }
+
+    .track-preview {
+        margin-top: 0.5rem;
+        order: 3;
+    }
+
+    .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    /* Вертикальные карточки для книг */
+    .book-row {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem;
+        text-align: center;
+        align-items: center;
+        min-width: auto !important;
+    }
+    
+    .book-number {
+        display: none;
+    }
+
+    .book-year {
+        display: block;
+        color: #8b9ba8;
+        font-size: 0.9rem;
+        order: 3;
     }
 
     .book-title {
-        font-size: 0.85rem;
-        line-height: 1.3;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2d3748;
+        line-height: 1.4;
+        order: 1;
     }
-
+    
     .book-author {
-        font-size: 0.8rem;
-        line-height: 1.2;
-        white-space: normal;
+        font-size: 1rem;
+        color: #ff9800;
+        font-weight: 500;
+        line-height: 1.3;
+        order: 2;
+    }
+    
+    .book-actions {
+        margin-top: 0.5rem;
+        order: 4;
     }
 
-    .preview-button {
-        padding: 0.4rem 0.7rem;
-        font-size: 0.75rem;
+    .playlist-container, .books-container {
+        overflow-x: visible;
+        gap: 1rem;
+    }
+
+    .track-row, .book-row {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Убедитесь, что текст не выходит за границы */
+    .track-name, .book-title, .track-artist, .book-author {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
     }
 
     .weather-details {
@@ -578,14 +649,10 @@ nav a.active::after {
         font-size: 1.1rem;
     }
     
-    .track-row {
-        min-width: 320px;
-        grid-template-columns: 30px 30px 1fr 60px !important;
-    }
-    
-    .book-row {
-        min-width: 320px;
-        grid-template-columns: 30px 40px 1fr 70px !important;
+    .track-row, .book-row {
+        min-width: unset !important;
+        width: calc(100% - 10px);
+        margin: 0 5px;
     }
     
     .track-image {
@@ -599,8 +666,24 @@ nav a.active::after {
     }
     
     .play-button {
-        width: 36px;
-        height: 36px;
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .track-name {
+        font-size: 1rem;
+    }
+
+    .track-artist {
+        font-size: 0.9rem;
+    }
+
+    .book-title {
+        font-size: 1rem;
+    }
+
+    .book-author {
         font-size: 0.9rem;
     }
 }
@@ -649,95 +732,5 @@ nav a.active::after {
     
     .btn:active, .play-button:active, .preview-button:active {
         transform: scale(0.95);
-    }
-}
-
-@media (max-width: 768px) {
-    /* Скрыть заголовки таблицы на мобильных */
-    .playlist-header, .books-header {
-        display: none;
-    }
-    
-    /* Вертикальные карточки для треков */
-    .track-row {
-        display: flex !important;
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1.2rem;
-        min-width: auto !important;
-        text-align: center;
-    }
-    
-    /* Скрыть номер и изображение */
-    .track-number, .track-image {
-        display: none;
-    }
-
-    .track-name {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #2d3748;
-        white-space: normal;
-        line-height: 1.4;
-    }
-
-    .track-artist {
-        font-size: 1rem;
-        color: #667eea;
-        font-weight: 500;
-        white-space: normal;
-        line-height: 1.3;
-    }
-
-    .track-preview {
-        margin-top: 0.5rem;
-    }
-
-    .play-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.1rem;
-    }
-
-    .book-row {
-        display: flex !important;
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1.2rem;
-        min-width: auto !important;
-        text-align: center;
-        align-items: center;
-    }
-    
-    .book-number {
-        display: none;
-    }
-    
-    .book-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #2d3748;
-        line-height: 1.4;
-    }
-    
-    .book-author {
-        font-size: 1rem;
-        color: #667eea;
-        font-weight: 500;
-        line-height: 1.3;
-    }
-    
-    .book-year {
-        display: block;
-        color: #8b9ba8;
-        font-size: 0.9rem;
-    }
-    
-    .book-actions {
-        margin-top: 0.5rem;
-    }
-
-    .playlist-container, .books-container {
-        overflow-x: visible;
     }
 }
