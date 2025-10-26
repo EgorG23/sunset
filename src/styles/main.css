@@ -729,3 +729,15 @@ nav a.active::after {
         transform: scale(0.95);
     }
 }
+
+.album-timer {
+    color: #8b9ba8;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+#countdown {
+    font-weight: 600;
+    color: #6b8e8e;
+}
