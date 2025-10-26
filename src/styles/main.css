@@ -519,35 +519,6 @@ nav a.active::after {
         padding: 1rem 1.5rem;
     }
 
-    .playlist-container, .books-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    .track-row {
-        grid-template-columns: 35px 35px 1fr 70px !important;
-        gap: 0.6rem;
-        padding: 0.8rem;
-        min-width: 350px;
-    }
-    
-    .playlist-header {
-        grid-template-columns: 35px 35px 1fr 70px !important;
-        min-width: 350px;
-    }
-    
-    .book-row {
-        grid-template-columns: 35px 45px 1fr 80px !important;
-        gap: 0.6rem;
-        padding: 0.8rem;
-        min-width: 350px;
-    }
-    
-    .books-header {
-        grid-template-columns: 35px 45px 1fr 80px !important;
-        min-width: 350px;
-    }
-
     .track-album {
         display: none;
     }
@@ -678,5 +649,95 @@ nav a.active::after {
     
     .btn:active, .play-button:active, .preview-button:active {
         transform: scale(0.95);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Скрыть заголовки таблицы на мобильных */
+    .playlist-header, .books-header {
+        display: none;
+    }
+    
+    /* Вертикальные карточки для треков */
+    .track-row {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem;
+        min-width: auto !important;
+        text-align: center;
+    }
+    
+    /* Скрыть номер и изображение */
+    .track-number, .track-image {
+        display: none;
+    }
+
+    .track-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2d3748;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .track-artist {
+        font-size: 1rem;
+        color: #667eea;
+        font-weight: 500;
+        white-space: normal;
+        line-height: 1.3;
+    }
+
+    .track-preview {
+        margin-top: 0.5rem;
+    }
+
+    .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    .book-row {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem;
+        min-width: auto !important;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .book-number {
+        display: none;
+    }
+    
+    .book-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2d3748;
+        line-height: 1.4;
+    }
+    
+    .book-author {
+        font-size: 1rem;
+        color: #667eea;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+    
+    .book-year {
+        display: block;
+        color: #8b9ba8;
+        font-size: 0.9rem;
+    }
+    
+    .book-actions {
+        margin-top: 0.5rem;
+    }
+
+    .playlist-container, .books-container {
+        overflow-x: visible;
     }
 }
