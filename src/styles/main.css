@@ -370,10 +370,8 @@ nav a.active::after {
     box-shadow: 0 6px 16px rgba(255, 152, 0, 0.4);
 }
 
-.playlist-header, .books-header {
+.playlist-header, .books-header, .games-header {
     display: grid;
-    grid-template-columns: 50px 50px 1fr 1fr 1fr 90px;
-    gap: 1.5rem;
     padding: 1rem 1.5rem;
     font-size: 0.9rem;
     font-weight: 600;
@@ -385,15 +383,31 @@ nav a.active::after {
     backdrop-filter: blur(10px);
 }
 
-.playlist-header > div, .books-header > div {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.playlist-header {
+    grid-template-columns: 50px 50px 1fr 1fr 1fr 90px;
+    gap: 1.5rem;
 }
 
 .books-header {
     grid-template-columns: 50px 60px 1fr 1fr 1fr 130px;
+    gap: 1.5rem;
+}
+
+.games-header {
+    grid-template-columns: 50px 120px 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    color: #718096;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0.5rem;
+}
+
+.playlist-header > div, .books-header > div, .games-header > div {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
 }
 
 .header-image, .header-preview, .header-actions {
@@ -511,19 +525,6 @@ nav a.active::after {
     text-align: center;
 }
 
-.games-header {
-    display: grid;
-    grid-template-columns: 50px 120px 2fr 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-    color: #718096;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-bottom: 1px solid #e2e8f0;
-    margin-bottom: 0.5rem;
-}
-
 @media (max-width: 768px) {
     #app {
         padding: 25px 15px;
@@ -598,17 +599,8 @@ nav a.active::after {
         padding: 1rem 1.5rem;
     }
 
-    .playlist-header, .books-header {
+    .playlist-header, .books-header, .games-header {
         display: none;
-    }
-
-    .track-row {
-        display: flex !important;
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1.2rem;
-        text-align: center;
-        min-width: auto !important;
     }
 
     .track-row {
@@ -740,10 +732,6 @@ nav a.active::after {
         gap: 0.8rem;
     }
     
-    .games-header {
-        display: none;
-    }
-    
     .game-players {
         display: none;
     }
@@ -852,5 +840,11 @@ nav a.active::after {
     
     .btn:active, .play-button:active, .preview-button:active {
         transform: scale(0.95);
+    }
+}
+
+@media (min-width: 769px) {
+    .playlist-header, .books-header, .games-header {
+        display: grid !important;
     }
 }
