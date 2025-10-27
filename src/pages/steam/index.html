@@ -11,30 +11,30 @@
         <nav id="navigation">
             <a href="/sunset/">Главная</a>
             <a href="/sunset/src/pages/music/">Музыка</a>
-            <a href="/sunset/src/pages/steam/">Steam</a>
-            <a href="/sunset/src/pages/books/" class="active">Книги</a>
+            <a href="/sunset/src/pages/books/">Книги</a>
+            <a href="/sunset/src/pages/steam/" class="active">Steam</a>
         </nav>
         
         <main>
             <div class="hero">
-                <h1>📚 Книжный раздел</h1>
-                <p>Найдите интересные книги для чтения</p>
+                <h1>🎮 Steam Games</h1>
+                <p>Популярные игры и статистика из Steam</p>
             </div>
 
             <section class="spotify-widget">
-                <h2>Поиск книг</h2>
+                <h2>Поиск игр Steam</h2>
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Введите название книги или автора...">
+                    <input type="text" id="search-input" placeholder="Введите название игры...">
                     <button id="search-btn" class="btn">Поиск</button>
                 </div>
                 
-                <div id="books-results" class="playlist-container">
-                    <div class="loading">Используйте поиск чтобы найти книги</div>
+                <div id="steam-results">
+                    <div class="loading">Используйте поиск чтобы найти игры</div>
                 </div>
             </section>
         </main>
     </div>
 
-    <script type="module" src="/src/scripts/books.js"></script>
+    <script type="module" src="/src/scripts/steam.js"></script>
 </body>
 </html>

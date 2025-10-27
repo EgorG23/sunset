@@ -444,6 +444,86 @@ nav a.active::after {
     margin-bottom: 2rem;
 }
 
+.games-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.game-row {
+    display: grid;
+    grid-template-columns: 50px 120px 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background 0.2s ease;
+}
+
+.game-row:hover {
+    background: #f8fafc;
+}
+
+.game-number {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.game-image {
+    width: 120px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.game-name {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.game-players {
+    color: #667eea;
+    font-size: 0.85rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.game-score {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.game-price {
+    color: #10b981;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.games-header {
+    display: grid;
+    grid-template-columns: 50px 120px 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    color: #718096;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
     #app {
         padding: 25px 15px;
@@ -653,6 +733,25 @@ nav a.active::after {
     
     .weather-temp {
         font-size: 2.5rem;
+    }
+
+    .game-row {
+        grid-template-columns: 40px 80px 1fr 1fr;
+        gap: 0.8rem;
+    }
+    
+    .games-header {
+        grid-template-columns: 40px 80px 1fr 1fr;
+    }
+    
+    .game-players,
+    .game-price {
+        display: none;
+    }
+    
+    .game-image {
+        width: 80px;
+        height: 40px;
     }
 }
 
