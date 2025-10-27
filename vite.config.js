@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: './index.html',
         music: './src/pages/music/index.html',
+        steam: './src/pages/steam/index.html',
         weather: './src/pages/weather/index.html',
         books: './src/pages/books/index.html'
       }
