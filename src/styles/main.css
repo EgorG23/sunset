@@ -47,7 +47,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+    background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);
     color: white;
     box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
 }
