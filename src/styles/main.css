@@ -741,12 +741,17 @@ nav a.active::after {
     }
     
     .games-header {
-        grid-template-columns: 40px 80px 1fr 1fr;
+        display: none;
     }
     
-    .game-players,
-    .game-price {
+    .game-players {
         display: none;
+    }
+
+    .game-price {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 600;
     }
     
     .game-image {
