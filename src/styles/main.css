@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Добавьте это */
-html {
-    background: #009a90; /* Основной цвет из градиента */
-    height: 100%;
-}
-
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
