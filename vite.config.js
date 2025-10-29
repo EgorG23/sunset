@@ -9,7 +9,8 @@ export default defineConfig({
         music: './src/pages/music/index.html',
         steam: './src/pages/steam/index.html',
         weather: './src/pages/weather/index.html',
-        books: './src/pages/books/index.html'
+        books: './src/pages/books/index.html',
+        currency: './src/pages/currency/index.html',
       }
     }
   },
