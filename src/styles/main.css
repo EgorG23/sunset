@@ -396,60 +396,27 @@ nav a.active {
   }
 
   .book-row {
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.8rem;
+    gap: 0.5rem;
     padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    min-width: 0;
-  }
-
-  .book-info {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
   }
 
   .book-image {
-    width: 45px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 6px;
-    flex-shrink: 0;
-  }
-
-  .book-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
+    width: 50px;
+    height: 65px;
   }
 
   .book-title {
-    font-weight: 700;
     font-size: 0.9rem;
-    color: #2e2a47;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+    flex: 2;
+    width: auto;
   }
 
   .book-author {
-    font-weight: 500;
     font-size: 0.8rem;
-    color: #5b4b8a;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+    flex: 1.5;
+    width: auto;
   }
 
   .book-year {
@@ -460,15 +427,9 @@ nav a.active {
     display: none;
   }
 
-  .book-actions {
-    flex-shrink: 0;
-  }
-
   .preview-button {
-    padding: 0.4rem 0.7rem;
+    padding: 0.35rem 0.6rem;
     font-size: 0.75rem;
-    border-radius: 8px;
-    white-space: nowrap;
   }
 
 }
