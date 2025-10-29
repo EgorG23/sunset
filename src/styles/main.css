@@ -225,7 +225,7 @@ nav a.active {
 .book-number { width: 40px; flex-shrink: 0; text-align: center; }
 .book-image { width: 60px; height: 80px; flex-shrink: 0; object-fit: cover; border-radius: 8px; }
 .book-title { width: 250px; overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
-.book-author { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #b47aff; }
+.book-author { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ffffff; }
 .book-year { width: 80px; flex-shrink: 0; text-align: right; color: #ffffff; }
 .book-actions { flex-shrink: 0; text-align: right; }
 
@@ -396,40 +396,36 @@ nav a.active {
   }
 
   .book-row {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
     padding: 0.8rem;
-  }
-
-  .book-image {
-    width: 50px;
-    height: 65px;
-  }
-
-  .book-title {
-    font-size: 0.9rem;
-    flex: 2;
-    width: auto;
-  }
-
-  .book-author {
-    font-size: 0.8rem;
-    flex: 1.5;
-    width: auto;
-  }
-
-  .book-year {
-    display: none;
+    gap: 0.8rem;
   }
 
   .book-number {
     display: none;
   }
 
+  .book-image {
+    width: 45px;
+    height: 60px;
+  }
+
+  .book-title {
+    flex: 3;
+    font-size: 0.9rem;
+  }
+
+  .book-author {
+    flex: 2;
+    font-size: 0.85rem;
+  }
+
+  .book-year {
+    display: none;
+  }
+
   .preview-button {
-    padding: 0.35rem 0.6rem;
-    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 
 }
