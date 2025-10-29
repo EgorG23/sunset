@@ -380,7 +380,12 @@ nav a.active {
     flex: 1;
   }
   .book-author {
-    display: none;
+    font-size: 0.8rem;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
   }
   .book-year { 
     display: none; 
