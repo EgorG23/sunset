@@ -509,6 +509,35 @@ nav a.active {
     min-width: 60px; /* Фиксируем ширину кнопки для единообразия */
     text-align: center;
   }
+
+  .converter-container {
+    padding: 1.5rem 1rem;
+    width: 90%;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    display: none; /* на маленьких экранах можно убрать стрелку для компактности */
+  }
+
+  #convert-btn {
+    width: 100%;
+  }
+
+  .result {
+    font-size: 1rem;
+  }
+
 }
 
 @media (max-width: 480px) {
