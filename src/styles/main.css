@@ -151,7 +151,6 @@ nav a.active {
 }
 
 .feature-card p {
-  color: #9790ad;
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 1.8rem;
@@ -192,7 +191,7 @@ nav a.active {
 /* ----------------------------- */
 /* СПИСКИ / КАТАЛОГИ */
 /* ----------------------------- */
-.track-row, .book-row {
+.book-row {
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -205,39 +204,29 @@ nav a.active {
   transition: all 0.3s ease;
 }
 
-.track-row:hover, .book-row:hover {
-  background: rgba(255, 255, 255, 0.55);
-  transform: translateY(-3px);
+.playlist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.track-image, .book-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  object-fit: cover;
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.4);
+  border-radius: 16px;
+  min-width: 0; /* важно для текста */
 }
 
-.track-name {
-  flex: 2;
-  font-weight: 600;
-  color: #2e2a47;
-}
+.track-number { width: 40px; flex-shrink: 0; text-align: center; }
+.track-image { width: 60px; height: 60px; flex-shrink: 0; }
+.track-name { width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track-artist { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track-album { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track-preview { width: 60px; flex-shrink: 0; text-align: center; }
 
-.track-artist {
-  flex: 1.5;
-  color: #b47aff;
-  font-weight: 500;
-}
-
-.track-album {
-  flex: 1;
-  color: #6b6b84;
-  font-size: 0.9rem;
-}
-
-.track-preview {
-  flex-shrink: 0;
-}
 
 
 .play-button {
