@@ -162,6 +162,12 @@ nav a.active {
   box-shadow: 0 10px 25px rgba(172, 115, 255, 0.4);
 }
 
+.playlist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
 .books-container {
   display: flex;
   flex-direction: column;
@@ -205,12 +211,11 @@ nav a.active {
 }
 
 .yandex-music-widget h2 {
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
   display: inline-block;
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
 
@@ -440,12 +445,17 @@ nav a.active {
 
   .result { font-size: 1rem; }
 
-  .music-widget h2 {
+  .yandex-music-widget h2 {
     background: rgba(255, 255, 255, 0.55);
     padding: 0.5rem 1rem;
     border-radius: 12px;
     display: inline-block;
   }
+
+  .playlist-container {
+    gap: 0.5rem;
+  }
+
 
 }
 
