@@ -338,13 +338,58 @@ nav a.active {
   font-size: 0.9rem;
 }
 
-.arrow {
-  font-size: 1.5rem;
-  color: #475569;
-}
-
 .currency-page p {
   margin-bottom: 1.2rem;
+}
+
+
+.currency-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.converter-container {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 35px rgba(172, 115, 255, 0.15);
+  backdrop-filter: blur(16px);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 122, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+.arrow {
+  font-weight: bold;
+  color: #7e22ce;
+}
+
+.result {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5b4b8a;
+  margin-top: 1rem;
 }
 
 

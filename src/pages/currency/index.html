@@ -10,30 +10,31 @@
 <body>
     <div id="app">
         <nav id="navigation">
-          <a href="/sunset/">Главная</a>
-          <a href="/sunset/src/pages/music/">Музыка</a>
-          <a href="/sunset/src/pages/currency/" class="active">Валюта</a>
-          <a href="/sunset/src/pages/books/">Книги</a>
+            <a href="/sunset/">Главная</a>
+            <a href="/sunset/src/pages/music/">Музыка</a>
+            <a href="/sunset/src/pages/currency/" class="active">💱 Валюты</a>
+            <a href="/sunset/src/pages/books/">Книги</a>
         </nav>
-
-        <main class="currency-page">
-          <h1>💱 Конвертер валют</h1>
-          <p>Введите сумму и выберите валюты для конвертации</p>
-
-          <div class="converter-box">
-            <input type="number" id="amount" placeholder="Введите сумму" min="0" step="any">
-
-            <div class="currency-selectors">
-              <select id="from-currency"></select>
-              <span class="arrow">→</span>
-              <select id="to-currency"></select>
+        
+        <main>
+            <div class="hero">
+                <h1>💱 Конвертер валют</h1>
+                <p>Введите сумму и выберите валюты для конвертации</p>
             </div>
 
-            <button id="convert-btn" class="btn">Конвертировать</button>
-
-            <div id="result" class="result-box"></div>
-          </div>
+            <section class="currency-page">
+                <div class="converter-container">
+                    <div class="input-group">
+                        <input type="number" id="amount" placeholder="Сумма" min="0">
+                        <select id="from-currency"></select>
+                        <span class="arrow">→</span>
+                        <select id="to-currency"></select>
+                    </div>
+                    <button id="convert-btn" class="btn">Конвертировать</button>
+                    <div id="result" class="result"></div>
+                </div>
+            </section>
         </main>
-      </div>
+    </div>
 </body>
 </html>
