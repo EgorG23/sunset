@@ -386,8 +386,7 @@ nav a.active {
   }
 
   .track-album {
-    font-size: 0.75rem;
-    flex: 1;
+    display: none
   }
 
   .play-button {
