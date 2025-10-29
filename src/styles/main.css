@@ -365,9 +365,37 @@ nav a.active {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.3rem 0.6rem;
   }
   .track-name, .track-artist, .track-album { width: 100%; white-space: normal; }
   .track-preview { width: auto; }
+
+  .track-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .track-name {
+    font-size: 0.9rem;
+    flex: 2;
+  }
+
+  .track-artist {
+    font-size: 0.8rem;
+    flex: 1.5;
+  }
+
+  .track-album {
+    font-size: 0.75rem;
+    flex: 1;
+  }
+
+  .play-button {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
   .book-row {
     flex-direction: row;
     align-items: center;
