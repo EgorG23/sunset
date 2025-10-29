@@ -362,7 +362,7 @@ nav a.active {
   .hero { padding: 3rem 1.5rem; }
   .features { grid-template-columns: 1fr; gap: 1.5rem; }
   .track-row {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 0.5rem;
   }
