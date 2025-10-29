@@ -82,13 +82,11 @@ function renderBooks(books, title) {
         <div class="books-container">
             ${books.map((book, index) => `
                 <div class="book-row">
-                    <div class="book-info">
-                        <div class="book-number">${index + 1}</div>
-                        <img src="${book.image}" alt="${book.title}" class="book-image">
-                        <div class="book-title" title="${book.title}">${book.title}</div>
-                        <div class="book-author" title="${book.author}">${book.author}</div>
-                        <div class="book-year">${book.year}</div>
-                    </div>
+                    <div class="book-number">${index + 1}</div>
+                    <img src="${book.image}" alt="${book.title}" class="book-image">
+                    <div class="book-title" title="${book.title}">${book.title}</div>
+                    <div class="book-author" title="${book.author}">${book.author}</div>
+                    <div class="book-year">${book.year}</div>
                     <div class="book-actions">
                         ${book.preview ? 
                         `<a href="${book.preview}" target="_blank" class="preview-button">📖 Читать</a>` : 
