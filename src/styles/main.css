@@ -224,9 +224,9 @@ nav a.active {
 
 .book-number { width: 40px; flex-shrink: 0; text-align: center; }
 .book-image { width: 60px; height: 80px; flex-shrink: 0; object-fit: cover; border-radius: 8px; }
-.book-title { width: 250px; overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.book-title { width: 250px; overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 .book-author { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ffffff; }
-.book-year { width: 80px; flex-shrink: 0; text-align: right; color: #ffffff; }
+.book-year { width: 180px; flex-shrink: 0; text-align: right; color: #ffffff; }
 .book-actions { flex-shrink: 0; text-align: right; }
 
 .book-info {
