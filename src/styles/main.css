@@ -376,7 +376,7 @@ nav a.active {
     font-size: 0.9rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
     flex: 1;
   }
   .book-author {
@@ -384,7 +384,7 @@ nav a.active {
     color: #ffffff;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
     flex: 1;
   }
   .book-year { 
