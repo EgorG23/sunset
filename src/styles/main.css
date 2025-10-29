@@ -219,6 +219,7 @@ nav a.active {
   border-radius: 16px;
   min-width: 0; /* важно для текста */
   flex-wrap: nowrap;
+  justify-content: space-between; 
 }
 
 .book-number { width: 40px; flex-shrink: 0; text-align: center; }
@@ -226,7 +227,14 @@ nav a.active {
 .book-title { width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
 .book-author { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #b47aff; }
 .book-year { width: 80px; flex-shrink: 0; text-align: center; color: #6b6b84; }
-.book-actions { width: 100px; flex-shrink: 0; text-align: center; }
+.book-actions { flex-shrink: 0; text-align: right; }
+
+.book-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1; /* занимает оставшееся место */
+}
 
 .preview-button {
   display: inline-block;
