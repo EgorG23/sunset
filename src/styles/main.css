@@ -398,10 +398,18 @@ nav a.active {
   .book-row {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* кнопка справа, текст слева */
     gap: 0.5rem;
     padding: 0.4rem 0.6rem;
-    background: rgba(255, 255, 255, 0.85); /* фон для читаемости */
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
+  }
+
+  .book-left {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 1; /* занимает всю доступную ширину */
   }
 
   .book-image {
@@ -409,38 +417,37 @@ nav a.active {
     height: 60px;
     object-fit: cover;
     border-radius: 6px;
+    flex-shrink: 0;
   }
 
   .book-info {
     display: flex;
     flex-direction: column;
-    flex: 1;
     gap: 0.1rem;
+    overflow: hidden;
   }
 
   .book-title {
     font-weight: 700;
     font-size: 0.9rem;
     color: #2e2a47;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .book-author {
+  .book-author, .book-year {
     font-weight: 500;
     font-size: 0.8rem;
     color: #5b4b8a;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .book-actions {
-    flex-shrink: 0;
-    text-align: right;
+    flex-shrink: 0; /* кнопка не сжимается */
+    margin-left: 0.5rem;
   }
 }
 
