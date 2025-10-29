@@ -379,9 +379,9 @@ nav a.active {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.8rem;
+    padding: 0.3rem 0.6rem; /* Сделали как у треков */
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Убрали wrap, чтобы сохранить строку */
   }
 
   .book-number { display: none; }
@@ -391,6 +391,7 @@ nav a.active {
     flex-direction: column;
     flex: 1;
     gap: 2px;
+    min-width: 0;
   }
   .book-title {
     font-weight: 600;
@@ -398,7 +399,7 @@ nav a.active {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
+    flex: 1;
   }
   .book-author {
     font-size: 0.8rem;
@@ -406,11 +407,19 @@ nav a.active {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
+    flex: 1;
   }
   .book-year { display: none; }
-  .book-actions { flex-shrink: 0; margin-left: 0.5rem; }
-  .preview-button { font-size: 0.8rem; padding: 0.3rem 0.6rem; }
+  .book-actions {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+  .preview-button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 60px; /* Фиксируем ширину кнопки для единообразия */
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
