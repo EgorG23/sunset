@@ -224,7 +224,7 @@ nav a.active {
 
 .book-number { width: 40px; flex-shrink: 0; text-align: center; }
 .book-image { width: 60px; height: 80px; flex-shrink: 0; object-fit: cover; border-radius: 8px; }
-.book-title { width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.book-title { width: 250px; overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
 .book-author { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #b47aff; }
 .book-year { width: 80px; flex-shrink: 0; text-align: right; color: #ffffff; }
 .book-actions { flex-shrink: 0; text-align: right; }
@@ -279,7 +279,7 @@ nav a.active {
 
 .track-number { width: 40px; flex-shrink: 0; text-align: center; }
 .track-image { width: 60px; height: 60px; flex-shrink: 0; }
-.track-name { width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track-name { width: 250px; overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 .track-artist { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .track-album { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .track-preview { flex-shrink: 0; text-align: center; }
@@ -377,7 +377,13 @@ nav a.active {
     width: 100%;
     white-space: normal;
   }
-  .book-image { width: 100%; height: auto; }
+  .book-image { 
+    height: auto;
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
   .book-actions { text-align: left; }
 }
 
