@@ -369,9 +369,11 @@ nav a.active {
   .track-name, .track-artist, .track-album { width: 100%; white-space: normal; }
   .track-preview { width: auto; }
   .book-row {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
+    background: rgba(255,255,255,0.85);
+    padding: 0.8rem 1rem;
   }
   .book-title, .book-author, .book-year, .book-actions {
     width: 100%;
@@ -379,8 +381,8 @@ nav a.active {
   }
   .book-image { 
     height: auto;
-    width: 120px;
-    height: 160px;
+    width: 80px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
   }
