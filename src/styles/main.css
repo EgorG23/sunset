@@ -363,7 +363,7 @@ nav a.active {
   .features { grid-template-columns: 1fr; gap: 1.5rem; }
   .track-row {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
   }
   .track-name, .track-artist, .track-album { width: 100%; white-space: normal; }
