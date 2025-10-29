@@ -4,18 +4,40 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #2d3748;
+    color: #333;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%);
     min-height: 100vh;
+    position: relative;
 }
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%);
+    z-index: -9999;
+    pointer-events: none;
+}
+
+.main-content {
+    min-height: calc(100vh - 80px);
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
 
 #app {
     max-width: 1200px;
@@ -795,15 +817,25 @@ nav a.active::after {
         height: 40px;
     }
 
-    html, body {
+    html {
         background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%);
-        background-attachment: fixed;
-        overflow-x: hidden;
+        height: auto;
+        min-height: 100vh;
     }
     
     body {
-        background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%);
-        background-attachment: fixed;
+        background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%) !important;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    body::before {
+        background: linear-gradient(135deg, #e8f4f8 0%, #d1e8e2 50%, #b7d7d8 100%) !important;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 1rem;
     }
 }
 
