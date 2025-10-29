@@ -396,36 +396,59 @@ nav a.active {
   }
 
   .book-row {
-    padding: 0.8rem;
-    gap: 0.8rem;
+    flex-direction: row;       /* как у треков */
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    justify-content: space-between;
   }
 
   .book-number {
-    display: none;
+    display: none;            /* скрываем номер на мобилке */
   }
 
   .book-image {
-    width: 45px;
-    height: 60px;
+    width: 40px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 6px;
+  }
+
+  .book-info {
+    display: flex;
+    flex-direction: column;    /* название + автор */
+    flex: 1;                   /* занимает всё доступное место */
+    gap: 2px;
   }
 
   .book-title {
-    flex: 3;
+    font-weight: 600;
     font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .book-author {
-    flex: 2;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    color: #55516b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .book-year {
     display: none;
   }
 
+  .book-actions {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+
   .preview-button {
-    padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 
 }
