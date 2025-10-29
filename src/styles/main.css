@@ -398,32 +398,36 @@ nav a.active {
   .book-row {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* кнопка справа, текст слева */
-    gap: 0.5rem;
-    padding: 0.4rem 0.6rem;
+    gap: 0.6rem;
+    padding: 0.8rem;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
+    min-width: 0;
   }
 
-  .book-left {
+  .book-info {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    flex: 1; /* занимает всю доступную ширину */
+    gap: 0.6rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .book-image {
-    width: 40px;
+    width: 45px;
     height: 60px;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
   }
 
-  .book-info {
+  .book-text {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0.2rem;
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
   }
 
@@ -438,16 +442,26 @@ nav a.active {
 
   .book-author, .book-year {
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #5b4b8a;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  .book-number {
+    display: none;
+  }
+
   .book-actions {
-    flex-shrink: 0; /* кнопка не сжимается */
-    margin-left: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .preview-button {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 8px;
+    white-space: nowrap;
   }
 }
 
@@ -493,6 +507,29 @@ nav a.active {
 
   .track-name, .book-title, .game-name {
     color: #f3e8ff;
+  }
+
+  .book-row {
+    padding: 0.7rem;
+    gap: 0.5rem;
+  }
+  
+  .book-image {
+    width: 40px;
+    height: 55px;
+  }
+  
+  .book-title {
+    font-size: 0.85rem;
+  }
+  
+  .book-author, .book-year {
+    font-size: 0.7rem;
+  }
+  
+  .preview-button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
   }
 }
 
