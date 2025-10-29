@@ -210,14 +210,6 @@ function renderTracks(tracks, title) {
             🎵 ${title} ${tracks.length} треков
         </div>
         <div class="playlist-container">
-            <div class="playlist-header">
-                <div>#</div>
-                <div class="header-image">  </div>
-                <div>Название</div>
-                <div>Артист</div>
-                <div>Альбом</div>
-                <div class="header-preview">Превью</div>
-            </div>
             ${tracks.map((track, index) => `
                 <div class="track-row">
                     <div class="track-number">${index + 1}</div>

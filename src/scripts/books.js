@@ -80,14 +80,6 @@ function renderBooks(books, title) {
             📚 ${title} ${books.length} книг
         </div>
         <div class="books-container">
-            <div class="books-header">
-                <div>#</div>
-                <div class="header-image">📖</div>
-                <div>Название</div>
-                <div>Автор</div>
-                <div class="header-year">Год</div>
-                <div class="header-actions">Действия</div>
-            </div>
             ${books.map((book, index) => `
                 <div class="book-row">
                     <div class="book-number">${index + 1}</div>
