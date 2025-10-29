@@ -284,6 +284,66 @@ nav a.active {
   box-shadow: 0 6px 18px rgba(180, 122, 255, 0.4);
 }
 
+.currency-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.converter-box {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.currency-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.currency-selectors select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  background: white;
+  font-size: 1rem;
+}
+
+.converter-box input {
+  width: 80%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-box {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.conversion-result {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.rate-info {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #475569;
+}
+
+
 /* ----------------------------- */
 /* ПОИСК И ФОРМЫ */
 /* ----------------------------- */
