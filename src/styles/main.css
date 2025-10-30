@@ -355,7 +355,7 @@ nav a.active {
   .feature-card { padding: 2rem 1.5rem; }
 }
 
-@media (max-width: 768px) }
+@media (max-width: 768px) {
   #app { padding: 25px 15px; }
   nav { flex-direction: column; gap: 1rem; }
   .hero { padding: 3rem 1.5rem; }
@@ -448,6 +448,7 @@ nav a.active {
   .music-widget h2 {
     margin-bottom: 2rem;
     color: linear-gradient(135deg, #442e62, #851e6b);
+  }
 
 }
 
