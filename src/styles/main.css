@@ -227,7 +227,11 @@ nav a.active {
 
 .music-widget h2 {
   margin-bottom: 2rem;
-  color: linear-gradient(135deg, #442e62, #851e6b);
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #442e62, #851e6b); /* твой градиент */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .track-row {
@@ -249,12 +253,44 @@ nav a.active {
   flex: 1; 
 }
 
-.track-number { width: 40px; flex-shrink: 0; text-align: center; }
-.track-image { width: 60px; height: 60px; flex-shrink: 0; }
-.track-name { width: 250px; overflow: hidden; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
-.track-artist { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.track-album { width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.track-preview { flex-shrink: 0; text-align: center; }
+.track-number {
+    width: 40px; 
+    flex-shrink: 0; 
+    text-align: center; 
+}
+
+.track-image { 
+    width: 60px; 
+    height: 60px; 
+    flex-shrink: 0; 
+}
+
+.track-name { 
+    width: 250px; 
+    overflow: hidden; 
+    font-weight: 700; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+
+.track-artist { 
+    width: 180px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+
+.track-album { 
+    width: 180px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+
+.track-preview { 
+    flex-shrink: 0; 
+    text-align: center; 
+}
 
 .play-button {
   background: linear-gradient(135deg, #b47aff, #ff91c9);
@@ -446,8 +482,8 @@ nav a.active {
   }
 
   .music-widget h2 {
-    margin-bottom: 2rem;
-    color: linear-gradient(135deg, #442e62, #851e6b);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
   }
 
 }
