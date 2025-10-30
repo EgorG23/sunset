@@ -245,14 +245,14 @@ nav a.active {
 
 .music-section h2 {
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #442e62, #851e6b);
+  background: linear-gradient(135deg, #ff91c9, #b47aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 1rem 0;
 }
 
 .music-text-box {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
   border-radius: 20px;
   padding: 1rem 1.5rem;
@@ -262,7 +262,7 @@ nav a.active {
 
 .music-text-box h2 {
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #442e62, #851e6b);
+  background: linear-gradient(135deg, #ff91c9, #b47aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
