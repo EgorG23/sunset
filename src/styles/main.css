@@ -412,7 +412,7 @@ nav a.active {
   padding: 1rem 1.5rem;
   border-radius: 16px;
   border: 1px solid rgba(180, 122, 255, 0.3);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   width: 400px;
   max-width: 90%;
@@ -424,6 +424,12 @@ nav a.active {
   border-color: #b47aff;
   box-shadow: 0 0 0 4px rgba(180, 122, 255, 0.2);
 }
+
+.search-container input::placeholder {
+  color: #d0a7f4;
+  opacity: 1;
+}
+
 
 @media (max-width: 1024px) {
   .hero h1 { font-size: 2.6rem; }
