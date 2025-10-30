@@ -361,7 +361,7 @@ nav a.active {
 }
 
 .converter-container {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 10px 35px rgba(172, 115, 255, 0.15);
