@@ -229,9 +229,43 @@ nav a.active {
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #442e62, #851e6b); /* твой градиент */
+  background: linear-gradient(135deg, #442e62, #851e6b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.music-section {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.music-section h2 {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #442e62, #851e6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1rem 0;
+}
+
+.music-text-box {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.music-text-box h2 {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #442e62, #851e6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 .track-row {
@@ -483,6 +517,23 @@ nav a.active {
 
   .music-widget h2 {
     margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .music-section {
+    background: none;
+    padding: 0;
+  }
+  
+  .music-text-box {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .music-text-box h2 {
     font-size: 1.4rem;
   }
 
