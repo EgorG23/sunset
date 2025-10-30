@@ -355,7 +355,7 @@ nav a.active {
   .feature-card { padding: 2rem 1.5rem; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) }
   #app { padding: 25px 15px; }
   nav { flex-direction: column; gap: 1rem; }
   .hero { padding: 3rem 1.5rem; }
