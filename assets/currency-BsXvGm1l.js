@@ -1,0 +1,6 @@
+import"./main-BwHnrw3L.js";async function d(c="USD"){const o=await fetch(`https://open.er-api.com/v6/latest/${c}`);if(!o.ok)throw new Error("Ошибка при загрузке курсов");const r=await o.json();if(r.result!=="success")throw new Error("Ошибка API");return r.rates}async function l(){const c=document.getElementById("from-currency"),o=document.getElementById("to-currency"),r=document.getElementById("convert-btn"),s=document.getElementById("result");let i=await d("USD");Object.keys(i).sort().forEach(t=>{const e=document.createElement("option"),n=document.createElement("option");e.value=n.value=t,e.textContent=n.textContent=t,c.appendChild(e),o.appendChild(n)}),c.value="USD",o.value="EUR",r.addEventListener("click",async()=>{const t=parseFloat(document.getElementById("amount").value),e=c.value,n=o.value;if(isNaN(t)||t<=0){s.textContent="Введите корректную сумму";return}s.textContent="⏳ Загрузка...";try{i=await d(e);const a=i[n],u=(t*a).toFixed(2);s.innerHTML=`
+        <div class="conversion-result">
+          ${t} ${e} = <strong>${u} ${n}</strong>
+        </div>
+        <div class="rate-info">Курс: 1 ${e} = ${a.toFixed(4)} ${n}</div>
+      `}catch(a){s.textContent="Ошибка при получении данных 😢",console.error(a)}})}document.addEventListener("DOMContentLoaded",l);
