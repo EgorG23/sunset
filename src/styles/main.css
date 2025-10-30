@@ -210,15 +210,6 @@ nav a.active {
   align-items: center;
 }
 
-.yandex-music-widget h2 {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.55);
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-
 #yandex-music-container {
   width: 100%;
   height: 100%;
@@ -232,6 +223,11 @@ nav a.active {
   padding: 2rem;
   margin: 2rem 0;
   box-shadow: 0 15px 45px rgba(172, 115, 255, 0.12);
+}
+
+.music-widget h2 {
+  margin-bottom: 2rem;
+  color: #5b4b8a;
 }
 
 .track-row {
@@ -445,17 +441,14 @@ nav a.active {
 
   .result { font-size: 1rem; }
 
-  .yandex-music-widget h2 {
-    background: rgba(255, 255, 255, 0.55);
-    padding: 0.5rem 1rem;
-    border-radius: 12px;
-    display: inline-block;
-  }
-
   .playlist-container {
     gap: 0.5rem;
   }
 
+  .music-widget h2 {
+    margin-bottom: 2rem;
+    color: #5b4b8a;
+  }
 
 }
 
