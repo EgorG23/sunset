@@ -15,7 +15,6 @@ async function initCurrencyConverter() {
   let rates = await fetchRates('USD');
   const currencies = Object.keys(rates).sort();
 
-  // Заполняем списки валют
   currencies.forEach(cur => {
     const opt1 = document.createElement('option');
     const opt2 = document.createElement('option');
@@ -41,7 +40,6 @@ async function initCurrencyConverter() {
     resultBox.textContent = '⏳ Загрузка...';
 
     try {
-      // получаем курсы относительно выбранной валюты
       rates = await fetchRates(from);
       const rate = rates[to];
       const converted = (amount * rate).toFixed(2);
