@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оценка квартиры</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script type="module" src="/src/scripts/apartments.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/src/pages/music/">Музыка</a>
+        <a href="/src/pages/apartments/" class="active">Квартиры</a>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1>🏠 Оценка квартиры</h1>
+            <p>Заполните параметры</p>
+        </div>
+
+        <section class="spotify-widget">
+            <div class="search-container">
+
+                <!-- Основные -->
+                <select id="housing_type">
+                    <option>Новостройка</option>
+                    <option>Вторичка</option>
+                </select>
+
+                <select id="district">
+                    <option>Московский</option>
+                    <option>Нижегородский</option>
+                    <option>Канавинский</option>
+                    <option>Сормовский</option>
+                    <option>Автозаводский</option>
+                    <option>Ленинский</option>
+                    <option>Кстовский</option>
+                    <option>Советский</option>
+                    <option>Приокский</option>
+                    <option>Горьковская</option>
+                </select>
+
+                <input id="rooms" type="number" placeholder="Комнат">
+                <select id="is_studio">
+                    <option>Нет</option>
+                    <option>Да</option>
+                </select>
+
+                <input id="total_area" type="number" placeholder="Общая площадь">
+                <input id="living_area" type="number" placeholder="Жилая площадь">
+                <input id="kitchen_area" type="number" placeholder="Кухня">
+
+                <input id="floor" type="number" placeholder="Этаж">
+                <input id="num_floors" type="number" placeholder="Этажей">
+
+                <!-- Доп -->
+                <select id="bathrooms_type">
+                    <option>Совмещенный</option>
+                    <option>Раздельный</option>
+                    <option>Совмещенный, Раздельный</option>
+                </select>
+
+                <input id="num_loggia" type="number" placeholder="Лоджии">
+                <input id="num_balcony" type="number" placeholder="Балконы">
+
+                <select id="kitchen_and_living">
+                    <option>Нет</option>
+                    <option>Да</option>
+                </select>
+
+                <select id="condition">
+                    <option>Без отделки</option>
+                    <option>Предчистовая</option>
+                    <option>Чистовая</option>
+                    <option>Косметический</option>
+                    <option>Евро</option>
+                    <option>Требует ремонта</option>
+                    <option>Дизайнерский</option>
+                </select>
+
+                <input id="ceiling_height" type="number" placeholder="Высота потолков">
+
+                <select id="nearest_metro_st">
+                    <option>Горьковская</option>
+                    <option>Парк культуры</option>
+                    <option>Чкаловская</option>
+                    <option>Ленинская</option>
+                    <option>Буревестник</option>
+                    <option>Стрелка</option>
+                    <option>Пролетарская</option>
+                    <option>Московская</option>
+                    <option>Заречная</option>
+                    <option>Комсомольская</option>
+                </select>
+
+                <input id="minutes_to_metro" type="number" placeholder="Мин до метро">
+
+                <input id="num_freight_lift" type="number" placeholder="Грузовые лифты">
+                <input id="num_passenger_lift" type="number" placeholder="Пассажирские лифты">
+
+                <select id="parking_type">
+                    <option>Открытая</option>
+                    <option>Подземная</option>
+                    <option>Подземная, открытая</option>
+                </select>
+
+                <select id="building_type">
+                    <option>Кирпичный</option>
+                    <option>Монолитно-кирпичный</option>
+                    <option>Монолитный</option>
+                    <option>Панельный</option>
+                    <option>Блочный</option>
+                </select>
+
+                <select id="furniture">
+                    <option>Нет</option>
+                    <option>Да</option>
+                </select>
+
+                <select id="deal_type">
+                    <option>Свободная продажа</option>
+                    <option>Альтернативная</option>
+                    <option>Долевое участие (214-ФЗ)</option>
+                </select>
+
+                <input id="house_completion_year" type="number" placeholder="Год постройки">
+
+                <select id="first_floor_is_com">
+                    <option>Нет</option>
+                    <option>Да</option>
+                </select>
+
+                <select id="playground">
+                    <option>Нет</option>
+                    <option>Да</option>
+                </select>
+
+                <button id="predict-btn" class="btn">Рассчитать</button>
+
+            </div>
+
+            <div id="result-container">
+                <div class="loading">Введите данные</div>
+            </div>
+
+        </section>
+    </main>
+
+</div>
+</body>
+</html>
